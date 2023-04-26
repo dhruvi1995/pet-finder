@@ -1,0 +1,72 @@
+<%- include('header.ejs') %>
+
+
+
+    <div class="container mb-4">
+        <div class="row">
+            <div class="col">
+                <h2>Pet Finder</h2>
+                <hr class="my-custom-line">
+                <p>Enter your appropriate information and be part of our community.Stay Connected.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mb-5 ">
+        <h1 class="text-center">Sign Up</h1>
+        <form class="needs-validation w-50 mx-auto col-10 col-md-8 col-lg-6" novalidate action="/submitsignup"
+            method="POST">
+            <div class="mb-3">
+                <label for="name" class="form-label"></label>
+                <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name" required>
+                <div class="invalid-feedback">
+                    Please enter your name.
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label for="email" class="form-label"></label>
+                <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email"
+                    required>
+                <div class="invalid-feedback">
+                    Please enter a valid email address.
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="password" class="form-label"></label>
+                <input type="password" class="form-control" id="password" name="password"
+                    placeholder="Enter your password" required>
+                <div class="invalid-feedback">
+                    Please enter a password.
+                </div>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Gender</label>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="gender" id="male-radio" value="male">
+                    <label class="form-check-label" for="male-radio">Male</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="gender" id="female-radio" value="female">
+                    <label class="form-check-label" for="female-radio">Female</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="gender" id="other-radio" value="other">
+                    <label class="form-check-label" for="other-radio">Other</label>
+                </div>
+            </div>
+            <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" id="terms" required>
+                <label class="form-check-label" for="terms">I agree to the terms and conditions</label>
+                <div class="invalid-feedback">
+                    You must agree to the terms and conditions.
+                </div>
+            </div>
+            <div class="text-center mt-3 mb-5 pt-3 pb-3">
+                <button type="submit" class="btn btn-primary form-btn "
+                    style="background: #8F00FF; border: #8F00FF;">Submit</button>
+            </div>
+        </form>
+    </div>
+
+    <%- include('footer.ejs') %>

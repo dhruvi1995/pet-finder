@@ -1,0 +1,77 @@
+<%- include('header.ejs') %>
+    <%- include('nav.ejs') %>
+
+        <div class="container mt-4 mb-4">
+            <div class="row">
+                <div class="col">
+                    <h2 class="foundhead">Found a Pet?</h2>
+                    <p>Please fill out the form below to report a found cat in your possession to ROAM. Be sure to be as
+                        accurate
+                        and complete as possible!</p>
+                </div>
+            </div>
+        </div>
+
+
+
+        <form class="w-50 pt-5 mx-auto col-10 col-md-8 col-lg-6 pet-form" action="/submitform2" method="POST"
+            enctype="multipart/form-data" onsubmit="return validateForm()">
+            <div class="mb-3">
+                <label for="formGroupExampleInput" class="form-label">Pet's Name</label>
+                <input type="text" class="form-control" name="name" placeholder="Example input placeholder">
+            </div>
+            <div class="mb-3">
+                <label for="formGroupExampleInput" class="form-label">Species</label>
+                <input type="text" class="form-control" name="species" placeholder="Example input placeholder">
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Email address</label>
+                <input type="email" class="form-control" name="email" placeholder="name@example.com">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">General Description</label>
+                <textarea class="form-control" name="text" rows="3"></textarea>
+            </div>
+            <div class="mb-3">
+                <label for="date-time-input" class="form-label">Date and Time pet was last seen</label>
+                <input type="datetime-local" class="form-control" id="date-time-input" name="datetime">
+            </div>
+
+
+
+
+
+            <div class="mb-3">
+                <label for="formGroupExampleInput" class="form-label">Age</label>
+                <input type="text" class="form-control" id="formGroupExampleInput" name="age"
+                    placeholder="Example input placeholder">
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Gender</label>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="gender" id="male-radio" value="male">
+                    <label class="form-check-label" for="male-radio">Male</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="gender" id="female-radio" value="female">
+                    <label class="form-check-label" for="female-radio">Female</label>
+                </div>
+
+            </div>
+
+
+
+            <div class="mb-3">
+                <label for="formFile" class="form-label">Picture</label>
+                <input class="form-control" type="file" name="pic" id="formFile">
+            </div>
+            <div class="text-center mt-3 mb-5 pt-3 pb-3">
+                <button type="submit" class="btn btn-primary mb-4 form-btn"
+                    style="background: #8F00FF; border: #8F00FF;">Submit</button>
+            </div>
+        </form>
+
+        <%- include('foot.ejs') %>
+            <%- include('footer.ejs') %>

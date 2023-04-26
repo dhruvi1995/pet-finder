@@ -1,0 +1,35 @@
+<%- include('header.ejs') %>
+<!-- Navigation bar with Logo and home, about, blog, contact pages and logout button -->
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light mb-4 ">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="" style="font-weight: 600;">
+                <img src="http://localhost:3000/image/1" alt="Logo" width="30" height="30"
+                    class="d-inline-block align-text-top me-2">
+                Pet Finder
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="content">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="blog">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/logout">Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
